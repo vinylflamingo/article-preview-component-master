@@ -19,6 +19,32 @@ body {
     opacity: 1 !important;
 }
 
+.fade-in {
+	animation: fadeIn 1s;
+}
+
+.fade-out {
+	animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+  	opacity: 0;
+  }
+  to {
+ 	opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+    }
+    to {
+       opacity: 1;
+    }
+  }
+
 .main {
     display: flex;
     height: 100vh;
@@ -35,9 +61,7 @@ body {
     background-color: rgb(255, 255, 255);
     height: 280px;
     width: 730px;
-
-    
-
+    box-shadow: 0px 0px 50px 20px rgba(0,0,0,0.17);
 }
 .card-img {
     background-image: url("./images/drawers.jpg");
@@ -139,6 +163,12 @@ body {
 
 }
 
+.share-menu-item-group {
+    display: flex;
+    position:absolute;
+    justify-content: space-evenly;
+}
+
 .share-menu-triangle {
     width: 19px;
     height: 19px;
@@ -156,6 +186,64 @@ body {
     color: #fffeff;
     font-size: 12px;
     letter-spacing: 8px;
+    cursor: active;
+}
+
+@media (max-width: 991px){
+
+
+    .card {
+        flex-direction: column;
+        height: 515px;
+        width: 330px;
+        overflow:hidden;
+        
+    }
+
+    .card-img {
+        width: 330px;
+        min-height: 200px;
+        background-size: 100%;
+    }
+
+    .card-content {
+        margin: 30px 35px; 
+    }
+
+    .card-content h1 {
+        line-height: 23px;
+        font-size: 15px;
+    }
+    
+ 
+    .share-button {
+        margin-left: 0px;
+        z-index:5;
+        margin-top: 8px;
+    }
+
+    .author-info {
+        margin-right: 60px;
+    }
+
+    .card-footer {
+        margin-top: 70px;
+    }
+    
+    .share-menu {
+        height: 70px;
+        width: 330px;
+        left: 0px;
+        margin-top: 0px;
+        position: absolute;
+        bottom: 0;
+        padding-right: 0px;
+        justify-content: left;
+    }
+    
+    .share-menu-item {
+        margin-left: 21px;
+    }
 }
 
 
